@@ -105,6 +105,10 @@ app.get('/start-payment', (req, res) => {
     res.redirect('/create-payment');
 });
 
+app.get('*', (req, res) => {
+	res.send('Response Ok...');
+});
+
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`)
 })
